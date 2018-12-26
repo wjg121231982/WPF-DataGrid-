@@ -1,0 +1,42 @@
+﻿<Window x:Class="通过数据模板扩展表格单元格的显示内容.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       xmlns:local="clr-namespace:通过数据模板扩展表格单元格的显示内容"
+        Title="MainWindow" Height="350" Width="525">
+    
+    <!-- 一个数据模板，使用在后边DataGrid的最后一个单元格 -->
+    <Window.Resources>
+        <!-- 这个数据模板使用MessageModel这个类型作为数据模型 -->
+        <DataTemplate x:Key="cellEditingTemplate" DataType="{x:Type local:MessageModel}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="15"/>
+                </Grid.ColumnDefinitions>
+                <!-- 控件类型是一个TextBlock和一个Button控件的组合 -->
+                <TextBlock Grid.Column="0" Text="{Binding m_content}"/>
+                <Button Grid.Column="1" Content="..." Command="{Binding ShowCommand}"/>
+            </Grid>
+        </DataTemplate>
+
+        <DataTemplate x:Key="cellDropBox" DataType="{x:Type local:MessageModel}">
+            <ComboBox ItemsSource="{Binding m_content_detail}" SelectedIndex="0" />
+        </DataTemplate>
+    </Window.Resources>
+
+
+    <Grid>
+        <!-- 表格，用来显示MessageVM中所有的消息,使用ItemsSource指定数据源 -->
+        <DataGrid AutoGenerateColumns="False" x:Name="MsgDataGrid" ItemsSource="{Binding Path=.}" BeginningEdit="MsgDataGrid_BeginningEdit" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="编号" Binding="{Binding m_No}"/>
+                <DataGridTextColumn Header="时间戳" Binding="{Binding m_time}"/>
+                <!-- 自定义的数据模板添加到单元格的最后 -->
+                <DataGridTemplateColumn Header="消息内容" CellTemplate="{StaticResource ResourceKey = cellEditingTemplate}" 
+                                CellEditingTemplate="{StaticResource ResourceKey = cellEditingTemplate}"/>
+                <DataGridTemplateColumn Header="消息详情" CellTemplate="{StaticResource ResourceKey=cellDropBox}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+       
+    </Grid>
+</Window>

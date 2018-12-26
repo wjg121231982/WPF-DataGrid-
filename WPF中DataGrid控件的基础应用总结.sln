@@ -5,6 +5,12 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF中DataGrid控件的基础应用总结", "WPF中DataGrid控件的基础应用总结\WPF中DataGrid控件的基础应用总结.csproj", "{257FB38E-96D0-450A-9CDC-183186AFAD51}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "通过数据模板扩展表格单元格的显示内容", "通过数据模板扩展表格单元格的显示内容\通过数据模板扩展表格单元格的显示内容.csproj", "{EA9DDB88-504C-4FD8-AF2A-64ECB383330F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "通过动态类型实现一个动态DataGrid表格", "通过动态类型实现一个动态DataGrid表格\通过动态类型实现一个动态DataGrid表格.csproj", "{9D0CA9C0-4123-45BA-8A73-C073BDFE417F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "使用DataGrid自带的事件对表格进行操作", "使用DataGrid自带的事件对表格进行操作\使用DataGrid自带的事件对表格进行操作.csproj", "{DEC7AB48-C6CD-4D9F-83BD-29A89AEB61DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{257FB38E-96D0-450A-9CDC-183186AFAD51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{257FB38E-96D0-450A-9CDC-183186AFAD51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{257FB38E-96D0-450A-9CDC-183186AFAD51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA9DDB88-504C-4FD8-AF2A-64ECB383330F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA9DDB88-504C-4FD8-AF2A-64ECB383330F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA9DDB88-504C-4FD8-AF2A-64ECB383330F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA9DDB88-504C-4FD8-AF2A-64ECB383330F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D0CA9C0-4123-45BA-8A73-C073BDFE417F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D0CA9C0-4123-45BA-8A73-C073BDFE417F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D0CA9C0-4123-45BA-8A73-C073BDFE417F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D0CA9C0-4123-45BA-8A73-C073BDFE417F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEC7AB48-C6CD-4D9F-83BD-29A89AEB61DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEC7AB48-C6CD-4D9F-83BD-29A89AEB61DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEC7AB48-C6CD-4D9F-83BD-29A89AEB61DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEC7AB48-C6CD-4D9F-83BD-29A89AEB61DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
